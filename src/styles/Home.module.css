@@ -1,0 +1,90 @@
+html, body {
+  width: 100%;
+  height: 100vh; /* Prevent scrolling */
+  overflow: hidden; /* Disable scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); /* Full screen minus header height */
+  width: 100%;
+}
+
+/* 4 items in first row, 2 in second row */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* First row: 4 items */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin-top: 10px;
+}
+
+/* Force Threat Detection below Technical */
+.grid button:nth-child(5) {
+  grid-column: 2 / span 1; /* Puts it below the second column */
+  grid-row: 2;
+}
+
+/* Force Training and Awareness below Data Security */
+.grid button:nth-child(6) {
+  grid-column: 3 / span 1; /* Puts it below the third column */
+  grid-row: 2;
+}
+
+/* Darker component background */
+.card {
+  width: 220px;
+  height: 160px;
+  background: linear-gradient(to bottom, #d4af37, #8a6e00);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.07);
+}
+
+.card img {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 10px;
+}
+
+/* Responsive layout: Switch to 2 columns */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid button:nth-child(5),
+  .grid button:nth-child(6) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+/* Mobile: Switch to 1 column */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
