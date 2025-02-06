@@ -1,92 +1,139 @@
 /* ✅ Ensure the subpage layout is structured properly */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  /* ✅ Main content styling */
-  .content {
-    width: 80%;
-    margin-left: 100px;
-    margin-top: 100px;
-  }
-  
-  /* ✅ Clickable title */
-  .title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
-  }
-  
-  .title:hover {
-    color: #a88d12;
-  }
-  
-  /* ✅ Navigation Tabs (Left-aligned with spacing) */
-  .navTabs {
-    display: flex;
-    justify-content: flex-start; /* Left aligned */
-    gap: 20px; /* Increased spacing */
-    margin-bottom: 20px;
-    width: 100%;
-  }
-  
-  /* ✅ Active tab (Selected button) */
-  .activeTab {
-    background: linear-gradient(to bottom, #e1c12f, #a88d12);
-    color: black;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  /* ✅ Inactive tabs (Non-selected buttons) */
-  .inactiveTab {
-    background: #eaeaea;
-    color: #444; /* Darker text for visibility */
-    border: none;
-    padding: 12px 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background 0.2s ease;
-  }
-  
-  .inactiveTab:hover {
-    background: #d4d4d4;
-    transform: scale(1.05);
-  }
-  
-  /* ✅ Scrollable Question Box (Only this section is scrollable) */
-  .scrollableBox {
-    width: 80%;
-    max-height: 250px;
-    overflow-y: auto; /* Enable scrolling */
-    padding: 20px;
-    background: linear-gradient(to bottom, #fff8dc, #f0e68c);
-    border-radius: 15px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* ✅ Subtle Scroll Effect */
-  .scrollableBox::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  .scrollableBox::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-  }
-  
-  .scrollableBox::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ✅ Main content styling */
+.content {
+  width: 80%;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+/* ✅ Clickable title */
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.title:hover {
+  color: #a88d12;
+}
+
+/* ✅ Navigation Tabs (Left-aligned with spacing) */
+.navTabs {
+  display: flex;
+  justify-content: flex-start; /* Left aligned */
+  gap: 20px; /* Increased spacing */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* ✅ Active tab (Selected button) */
+.activeTab {
+  background: linear-gradient(to bottom, #e1c12f, #a88d12);
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ✅ Inactive tabs (Non-selected buttons) */
+.inactiveTab {
+  background: #eaeaea;
+  color: #444; /* Darker text for visibility */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.inactiveTab:hover {
+  background: #d4d4d4;
+  transform: scale(1.05);
+}
+
+/* ✅ Scrollable Question Box (Increased size for larger area) */
+.scrollableBox {
+  width: 80%;
+  max-height: 400px; /* Increased height */
+  min-height: 200px; /* Added a minimum height */
+  overflow-y: auto; /* Enable scrolling */
+  padding: 20px;
+  background: linear-gradient(to bottom, #fff8dc, #f0e68c);
+  border-radius: 15px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Subtle Scroll Effect */
+.scrollableBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollableBox::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.scrollableBox::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Checkbox Styling (Rounded and prettier) */
+.checkbox {
+  appearance: none;
+  width: 24px; /* Increased size for better visibility */
+  height: 24px;
+  border: 2px solid #a88d12;
+  border-radius: 12px; /* Rounded corners */
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.checkbox:checked {
+  background: linear-gradient(to bottom, #e1c12f, #a88d12);
+  border: none;
+}
+
+/* ✅ Submit Button Styling (Yellow theme with hover effect) */
+.submitButton {
+  background: linear-gradient(to bottom, #e1c12f, #a88d12);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background: linear-gradient(to bottom, #a88d12, #e1c12f);
+  transform: scale(1.05);
+}
+
+.hiddenList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
